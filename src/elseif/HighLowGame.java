@@ -16,6 +16,8 @@ public class HighLowGame {
 		// 2. Print out the random variable above
 		int random = new Random().nextInt(5);
 		// 11. do the following 10 times
+		for(int i=0;i<10;i++) {
+			
 		
 			// 1. ask the user for a guess using a pop-up window, and save their response 
 				String guess = JOptionPane.showInputDialog("Guess a random number.");
@@ -24,16 +26,23 @@ public class HighLowGame {
 				 
 			// 5. if the guess is correct
 				// 6. win
-			JOptionPane.showInputDialog("You win!");
+			if(guess2==number) {
+			JOptionPane.showMessageDialog(null, "You took the W");
+			}
 			// 7. if the guess is high
 				// 8. tell them it's too high
-			JOptionPane.showInputDialog("Too high!");
+			if(guess2>number) {
+			JOptionPane.showMessageDialog(null, "You on your way to take that L");
+			}
 			// 9. if the guess is low
 				// 10. tell them it's too low
-			JOptionPane.showInputDialog("Too low!");
-
+			if(guess2<number) {
+			JOptionPane.showMessageDialog(null, "You about to take a MASSIVE L");
+			}
+		
+		}
 		// 12. tell them they lose
-			JOptionPane.showInputDialog("HaHaHa,you lose");
+			JOptionPane.showMessageDialog(null, "You took the FATTEST L of all time");
 	}
 
 }
